@@ -62,10 +62,8 @@
     transition: 0.4s;
 }
 
-.search:hover {
+.search:hover{
     background-color: rgb(249, 231, 201);
-    transform: scale(1.10);
-
 }
 
 .social {

@@ -15,36 +15,49 @@ function backspace(){
 function calculate(){
 
     try{
-        display.value = eval(display.value);
+
+        let expression = display.value;
+
+        let result = Function(
+            '"use strict"; return (' + expression + ')'
+        )();
+
+        display.value = result;
     }
 
-    catch{
+    catch(error){
         display.value = "Error";
     }
 }
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function(event){
 
-    let key = event.key;
+    const key = event.key;
 
-    if (key >= "0" && key <= "9" || key === ".") {
-        display.value += key;
+    if("0123456789".includes(key)){
+        append(key);
     }
 
-    else if (key === "+" || key === "-" || key === "*" || key === "/") {
-        display.value += key;
+    else if(
+        ["+","-","*","/",".","(",")"]
+        .includes(key)
+    ){
+        append(key);
     }
 
-    else if (key === "Enter") {
+    else if(key === "Enter"){
         calculate();
     }
 
-    else if (key === "Backspace") {
-        display.value = display.value.slice(0, -1);
+    else if(key === "="){
+        calculate();
     }
 
-    else if (key === "Escape") {
-        display.value = "";
+    else if(key === "Backspace"){
+        backspace();
     }
 
+    else if(key === "Escape"){
+        clearDisplay();
+    }
 });
