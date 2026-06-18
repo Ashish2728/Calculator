@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="arithmetic.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="nav">
+
+        <img id="logo" src="logo.png" alt="Logo">
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+
+        <input type="text" placeholder="Search..." class="search">
+
+        <div class="social">
+            <img src="fb1.svg" id="fb" style="height:28px;" width="40">
+            <img src="ig.svg" id="ig" style="height:28px;" width="40">
+            <img src="li.svg" id="li" style="height:24px;" width="40">
+        </div>
+
+        <button class="log">Login</button>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            ☰
+        </label>
+
+        <div class="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+
+            <button class="log">Login</button>
+        </div>
+
+    </div>
+
+    <!-- Heading -->
+
+    <div class="head">
+        <h1>Arithmetic Calculator</h1>
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <!-- Left Side Data -->
+
+        <div class="data">
+
+            <h2>About Arithmetic Calculator</h2>
+
+            <p>
+                The Arithmetic Calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, division, and percentage calculations through an interactive and user-friendly interface.
+            </p>
+
+            <h3>Features</h3>
+
+            <ul>
+                <li>➕ Addition</li>
+                <li>➖ Subtraction</li>
+                <li>✖ Multiplication</li>
+                <li>➗ Division</li>
+                <li>📊 Percentage Calculation</li>
+                <li>⌫ Backspace Function</li>
+                <li>⚡ Instant Calculation</li>
+                <li>📱 Responsive Design</li>
+            </ul>
+
+            <!-- <h3>Technologies Used</h3>
+
+            <p>
+                HTML is used for the structure of the calculator,
+                CSS is used for styling and layout,
+                and JavaScript handles all calculations and user interactions.
+            </p>
+
+            <h3>How It Works</h3>
+
+            <p>
+                Users can enter numbers and operators by clicking the buttons.
+                JavaScript evaluates the expression and displays the result
+                instantly when the "=" button is pressed.
+            </p> -->
+
+        </div>
+
+        <!-- Calculator -->
+
+        <div class="calculator-container">
+
+            <div class="calculator">
+
+                <input type="text" id="display" readonly>
+
+                <div class="buttons">
+
+                    <button class="clear" onclick="clearDisplay()">C</button>
+                    <button class="operator" onclick="append('%')">%</button>
+                    <button class="operator" onclick="backspace()">⌫</button>
+                    <button class="operator" onclick="append('/')">÷</button>
+
+                    <button class="number" onclick="append('7')">7</button>
+                    <button class="number" onclick="append('8')">8</button>
+                    <button class="number" onclick="append('9')">9</button>
+                    <button class="operator" onclick="append('*')">×</button>
+
+                    <button class="number" onclick="append('4')">4</button>
+                    <button class="number" onclick="append('5')">5</button>
+                    <button class="number" onclick="append('6')">6</button>
+                    <button class="operator" onclick="append('-')">−</button>
+
+                    <button class="number" onclick="append('1')">1</button>
+                    <button class="number" onclick="append('2')">2</button>
+                    <button class="number" onclick="append('3')">3</button>
+                    <button class="operator" onclick="append('+')">+</button>
+
+                    <button class="number" onclick="append('0')">0</button>
+                    <button class="number" onclick="append('.')">.</button>
+
+                    <button class="equal" onclick="calculate()">=</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="arithmetic.js"></script>
+
+</body>
+
+</html>
