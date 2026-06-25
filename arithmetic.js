@@ -15,7 +15,6 @@ function backspace(){
 function calculate(){
 
     try{
-
         let expression = display.value;
 
         let result = Function(
